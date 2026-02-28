@@ -6,7 +6,7 @@ import { ArrowLeft, Loader2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-export default function ProductsPage() {
+export default function ProductsContent() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || undefined;
   const sort = searchParams.get("sort") || undefined;
