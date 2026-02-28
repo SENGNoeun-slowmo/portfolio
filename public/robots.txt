@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seng.dev/sitemap.xml
