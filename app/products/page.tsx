@@ -1,12 +1,15 @@
 "use client";
 
-import { useProducts } from "@/hooks/useProducts";
-import { motion } from "framer-motion";
-import { ArrowLeft, Loader2, AlertCircle } from "lucide-react";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+export const dynamic = "force-dynamic"; // ← crucial
 
-export default function ProductsContent() {
+import { useProducts } from "@/hooks/useProducts";
+import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowLeft, Loader2, AlertCircle } from "lucide-react";
+import { Suspense } from "react";
+
+function ProductsList() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || undefined;
   const sort = searchParams.get("sort") || undefined;
@@ -38,6 +41,39 @@ export default function ProductsContent() {
   }
 
   return (
+    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects?.map((project: any, idx: number) => (
+        <motion.div
+          key={project.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.05 }}
+          className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all hover:border-neon-cyan/50 hover:bg-white/[0.07]"
+        >
+          <div className="aspect-video overflow-hidden">
+            <img
+              src={project.images?.[0] || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop"}
+              alt={project.title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold group-hover:text-neon-cyan transition-colors">{project.title}</h3>
+            <p className="mt-2 text-sm text-white/50 line-clamp-2">{project.short_description}</p>
+            <div className="mt-4 flex flex-wrap gap-2 text-[10px] uppercase font-bold tracking-widest text-white/30">
+              {project.technologies?.map((tech: string) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
     <div className="min-h-screen py-24 px-4">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
@@ -53,34 +89,14 @@ export default function ProductsContent() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects?.map((project: any, idx: number) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all hover:border-neon-cyan/50 hover:bg-white/[0.07]"
-            >
-              <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.images?.[0] || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop"}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold group-hover:text-neon-cyan transition-colors">{project.title}</h3>
-                <p className="mt-2 text-sm text-white/50 line-clamp-2">{project.short_description}</p>
-                <div className="mt-4 flex flex-wrap gap-2 text-[10px] uppercase font-bold tracking-widest text-white/30">
-                  {project.technologies?.map((tech: string) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <Suspense fallback={
+          <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4">
+            <Loader2 className="h-12 w-12 animate-spin text-neon-cyan" />
+            <p className="text-lg font-medium text-white/50">Loading amazing works...</p>
+          </div>
+        }>
+          <ProductsList />
+        </Suspense>
       </div>
     </div>
   );

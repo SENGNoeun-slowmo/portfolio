@@ -1,11 +1,13 @@
 import axios from "axios";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
-
+const API_TOKEN = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 export const api = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
+    "apikey": API_TOKEN,             // Supabase expects this header
+    "Authorization": `Bearer ${API_TOKEN}`,
   },
 });
 
