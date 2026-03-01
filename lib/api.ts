@@ -11,9 +11,16 @@ export const api = axios.create({
   },
 });
 
+import { supabase } from "./supabase";
+
 // Add interceptor for auth if needed later
-api.interceptors.request.use((config) => {
-  const token = typeof window !== "undefined" ? localStorage.getItem("auth-token") : null;
+api.interceptors.request.use(async (config) => {
+  let token = null;
+  if (typeof window !== "undefined") {
+    const { data: { session } } = await supabase.auth.getSession();
+    token = session?.access_token || localStorage.getItem("auth-token");
+  }
+  
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

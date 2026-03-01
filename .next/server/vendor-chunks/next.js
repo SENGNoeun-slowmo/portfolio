@@ -1261,6 +1261,16 @@ eval("(()=>{\"use strict\";var e={211:e=>{var r=function(){function defineProper
 
 /***/ }),
 
+/***/ "(ssr)/./node_modules/next/dist/compiled/client-only/index.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/next/dist/compiled/client-only/index.js ***!
+  \**************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "(ssr)/./node_modules/next/dist/compiled/css.escape/css.escape.js":
 /*!******************************************************************!*\
   !*** ./node_modules/next/dist/compiled/css.escape/css.escape.js ***!
@@ -1816,19 +1826,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));
 
 "use strict";
 eval("/* eslint-disable import/no-extraneous-dependencies */ \nObject.defineProperty(exports, \"__esModule\", ({\n    value: true\n}));\nObject.defineProperty(exports, \"createProxy\", ({\n    enumerable: true,\n    get: function() {\n        return createProxy;\n    }\n}));\nconst _serveredge = __webpack_require__(/*! react-server-dom-webpack/server.edge */ \"(rsc)/./node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-server-dom-webpack-server-edge.js\");\nconst createProxy = _serveredge.createClientModuleProxy;\n\n//# sourceMappingURL=module-proxy.js.map//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2J1aWxkL3dlYnBhY2svbG9hZGVycy9uZXh0LWZsaWdodC1sb2FkZXIvbW9kdWxlLXByb3h5LmpzIiwibWFwcGluZ3MiOiJBQUFBLHVEQUFvRTtBQUNwRSw4Q0FBNkM7QUFDN0M7QUFDQSxDQUFDLEVBQUM7QUFDRiwrQ0FBOEM7QUFDOUM7QUFDQTtBQUNBO0FBQ0E7QUFDQSxDQUFDLEVBQUM7QUFDRixvQkFBb0IsbUJBQU8sQ0FBQywrSkFBc0M7QUFDbEU7O0FBRUEiLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcQXN1cyBST0dcXERlc2t0b3BcXE15cG9ydGZvbGlvXFxmcm9udGVuZFxcbm9kZV9tb2R1bGVzXFxuZXh0XFxkaXN0XFxidWlsZFxcd2VicGFja1xcbG9hZGVyc1xcbmV4dC1mbGlnaHQtbG9hZGVyXFxtb2R1bGUtcHJveHkuanMiXSwic291cmNlc0NvbnRlbnQiOlsiLyogZXNsaW50LWRpc2FibGUgaW1wb3J0L25vLWV4dHJhbmVvdXMtZGVwZW5kZW5jaWVzICovIFwidXNlIHN0cmljdFwiO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7XG4gICAgdmFsdWU6IHRydWVcbn0pO1xuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiY3JlYXRlUHJveHlcIiwge1xuICAgIGVudW1lcmFibGU6IHRydWUsXG4gICAgZ2V0OiBmdW5jdGlvbigpIHtcbiAgICAgICAgcmV0dXJuIGNyZWF0ZVByb3h5O1xuICAgIH1cbn0pO1xuY29uc3QgX3NlcnZlcmVkZ2UgPSByZXF1aXJlKFwicmVhY3Qtc2VydmVyLWRvbS13ZWJwYWNrL3NlcnZlci5lZGdlXCIpO1xuY29uc3QgY3JlYXRlUHJveHkgPSBfc2VydmVyZWRnZS5jcmVhdGVDbGllbnRNb2R1bGVQcm94eTtcblxuLy8jIHNvdXJjZU1hcHBpbmdVUkw9bW9kdWxlLXByb3h5LmpzLm1hcCJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOlswXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js\n");
-
-/***/ }),
-
-/***/ "(rsc)/./node_modules/next/dist/client/app-dir/link.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/next/dist/client/app-dir/link.js ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js")
-
-module.exports = createProxy("C:\\Users\\Asus ROG\\Desktop\\Myportfolio\\frontend\\node_modules\\next\\dist\\client\\app-dir\\link.js")
-
 
 /***/ }),
 
