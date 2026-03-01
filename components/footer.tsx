@@ -11,7 +11,7 @@ export function Footer() {
               SENG<span className="text-white">.DEV</span>
             </Link>
             <p className="mt-2 text-sm text-white/40">
-              © {new Date().getFullYear()} Seng Chanda. All rights reserved.
+              © {new Date().getFullYear()} Seng Noeun. All rights reserved.
             </p>
           </div>
 

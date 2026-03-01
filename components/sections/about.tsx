@@ -84,15 +84,15 @@ export function About() {
 
             <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3">
               <div>
-                <div className="text-4xl font-bold text-neon-cyan">8+</div>
+                <div className="text-4xl font-bold text-neon-cyan">+</div>
                 <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Years Exp.</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-neon-purple">50+</div>
+                <div className="text-4xl font-bold text-neon-purple">2+</div>
                 <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Projects</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-white">12+</div>
+                <div className="text-4xl font-bold text-white">+</div>
                 <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Awards</div>
               </div>
             </div>
