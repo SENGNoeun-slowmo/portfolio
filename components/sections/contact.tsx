@@ -5,9 +5,9 @@ import { Send, Github, Linkedin, Twitter, Mail, MapPin, Calendar } from "lucide-
 import { cn } from "@/lib/utils";
 
 const socialLinks = [
-  { name: "GitHub", icon: <Github className="h-5 w-5" />, href: "https://github.com", color: "hover:text-white" },
-  { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com", color: "hover:text-blue-400" },
-  { name: "X", icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", color: "hover:text-sky-400" },
+  { name: "GitHub", icon: <Github className="h-5 w-5" />, href: "https://github.com/SengNoeun", color: "hover:text-white" },
+  { name: "LinkedIn", icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/seng-noeun-54009a3b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "hover:text-blue-400" },
+  { name: "X", icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com/sengnana26", color: "hover:text-sky-400" },
 ];
 
 import { useProfile } from "@/hooks/useProducts";
@@ -67,7 +67,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-white/40 uppercase tracking-widest font-bold">Email</div>
-                  <div className="text-white font-medium">{profile?.email || "hello@seng.dev"}</div>
+                  <div className="text-white font-medium">{profile?.email || "sengnooeun3@gmail.com"}</div>
                 </div>
               </div>
               
