@@ -18,7 +18,7 @@ export function Hero() {
     );
   }
 
-  const fullName = profile?.full_name?.split(" ") || ["SENG", "CHANDA"];
+  const fullName = profile?.full_name?.split(" ") || ["SENG", "Noeun"];
   const firstName = fullName[0];
   const lastName = fullName.slice(1).join(" ");
 
