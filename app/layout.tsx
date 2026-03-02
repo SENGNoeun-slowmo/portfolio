@@ -11,13 +11,17 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
-  title: "Seng | Full-Stack Developer & Designer",
+  title: "SengNoeun",
+  icons: {
+    icon:"https://res.cloudinary.com/do5ecboqj/image/upload/v1772441273/Section_5_1_fwabdl.svg"
+  },
   description: "Senior Full-Stack Developer and UI/UX Designer based in Phnom Penh, specialized in building premium digital experiences.",
   keywords: ["Next.js", "React", "Portfolio", "Seng", "Full-Stack Developer", "Cambodia"],
 };
@@ -31,6 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased selection:bg-neon-cyan/30 selection:text-neon-cyan",

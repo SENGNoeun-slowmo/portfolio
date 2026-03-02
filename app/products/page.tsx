@@ -6,7 +6,7 @@ import { useProducts } from "@/hooks/useProducts";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, Loader2, AlertCircle } from "lucide-react";
+import { ArrowLeft, Loader2, AlertCircle, ArrowRight as ArrowIcon } from "lucide-react";
 import { Suspense } from "react";
 
 function ProductsList() {
@@ -65,6 +65,12 @@ function ProductsList() {
                 <span key={tech}>{tech}</span>
               ))}
             </div>
+            <div className="mt-6 flex items-center justify-between pt-6 border-t border-white/5">
+                    <span className="text-xs font-medium text-neon-purple italic">{project.duration || project.role}</span>
+                    <Link href={`/projects/${project.slug}`} className="flex items-center gap-1 text-sm font-bold">
+                      View Case <ArrowIcon className="h-3 w-3" />
+                    </Link>
+                  </div>
           </div>
         </motion.div>
       ))}
