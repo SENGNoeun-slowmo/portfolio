@@ -1544,9 +1544,6 @@
   .align-middle {
     vertical-align: middle;
   }
-  .\[font-family\:var\(--font-monoton\)\] {
-    font-family: var(--font-monoton);
-  }
   .font-mono {
     font-family: var(--font-mono);
   }
